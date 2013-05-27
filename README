@@ -9,7 +9,7 @@ It's time having fun for developing cool apps :).
 
 
 === How to deploy on heroku ===
-
++ heroku config:add DJANGO_SETTINGS_MODULE=settings.prod
 
 
 === How to deploy on openshif ===
