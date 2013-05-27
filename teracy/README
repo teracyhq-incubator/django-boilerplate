@@ -1,0 +1,3 @@
+This is the directory for teracy's projects, this should the the root namespace.
+
+To start a new project for teracy, cd to this directory and `python ../manage.py startapp app_name`.

@@ -1,2 +1,2 @@
 # settings for testing
-from default import *
+from common import *

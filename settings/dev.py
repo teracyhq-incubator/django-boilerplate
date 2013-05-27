@@ -1,6 +1,6 @@
 # settings for development
-from default import *
+from common import *
 
 INSTALLED_APPS += (
-    'apps.company',
+    'django.contrib.admin',
 )

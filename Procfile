@@ -1,1 +1,1 @@
-web: gunicorn teracy.wsgi
+web: gunicorn wsgi

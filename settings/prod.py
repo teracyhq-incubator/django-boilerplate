@@ -1,5 +1,7 @@
 # settings for production
-from default import *
+from common import *
+
+ROOT_URLCONF = 'urls.prod'
 
 #heroku
 # Parse database configuration from $DATABASE_URL
