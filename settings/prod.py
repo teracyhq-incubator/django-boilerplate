@@ -3,7 +3,7 @@ from default import *
 
 #heroku
 # Parse database configuration from $DATABASE_URL
-if environ.has_key('DATABASE_URL'):
+if 'DATABASE_URL' in os.environ:
     import dj_database_url
     DATABASES['default'] = dj_database_url.config()
 
