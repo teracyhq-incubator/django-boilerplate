@@ -1,6 +1,6 @@
 # Django settings for teracy project.
 import os
-from os import  environ
+from os import environ
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
