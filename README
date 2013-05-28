@@ -1,19 +1,30 @@
-=== How to start develop ===
+=== How to start with this project layout ===
 
 1. Create a virtual environment by installing virtualenvwrapper here: http://virtualenvwrapper.readthedocs.org/en/latest/
 2. Clone this repository to your `workon` virtual environment
 3. Install dev dependency requirements with this command: `pip install -r requirements/dev.txt`
 4. Syncdb with: `python manage.py syncdb` and start the server with `python manage.py runserver`.
 
-It's time having fun for developing cool apps :).
+It's time having fun for developing cool apps :-).
 
-5. Create a repository like `teracy-cool` which means we will create 'cool' app under `teracy` namespace.
-6. Add this project as submodule on `teracy-cool` repository: `git submodule add git://github.com/teracy-official/teracy.git teracy`.
-Note that: You should add 'ignore=dirty' on teracy submodule under .gitmodules file.
-See more: http://stackoverflow.com/questions/3240881/git-can-i-suppress-listing-of-modified-content-dirty-submodule-entries-in-sta
-7. Create `cool` application: `django-admin.py startapp cool`
-8. Symlink: `cd teracy/teracy` then `ln -s ../../cool cool` and it's done. Just develop your app as normal.
+=== How to start develop an application from this project layout ===
 
+I tried with submodule, forking model and it does not work so well to extend this base to develop an application.
+So this is my recommended workflow model after trying with submodule, forking model.
+
+For example, if we need to create a `cool` application under `teracy` namespace. We should follow these steps:
+
+1. Create a repository named: `teracy-cool`
+2. Clone that created repository. For example: git clone git@github.com:hoatle/teracy-cool.git
+3. `cd teracy-cool` and `git remote add teracy git://github.com/teracy-official/teracy.git` to fetch content and
+merge any changes from teracy's project layout.
+4. Merge `teracy` into `teracy-cool` with: `git fetch teracy ` then `git merge teracy/master`. Resolve any conflicts and commit.
+5. As `cool` app is under `teracy` namespace, we should `cd teracy` then `django-amdin.py startapp cool`.
+If you develop under different namespace, just create a different namespace and `startapp` under your specified namespace directory.
+
+You could see the `teracy-cool` repository here: https://github.com/hoatle/teracy-cool
+
+That's it. Happy coding :-)!
 
 === How to deploy on heroku ===
 + heroku config:add DJANGO_SETTINGS_MODULE=settings.prod
