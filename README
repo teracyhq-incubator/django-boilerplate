@@ -8,7 +8,9 @@
 It's time having fun for developing cool apps :).
 
 5. Create a repository like `teracy-cool` which means we will create 'cool' app under `teracy` namespace.
-6. Add this project as submodule on `teracy-cool` repository: `git submodule add git://github.com/teracy-official/teracy.git teracy`
+6. Add this project as submodule on `teracy-cool` repository: `git submodule add git://github.com/teracy-official/teracy.git teracy`.
+Note that: You should add 'ignore=dirty' on teracy submodule under .gitmodules file.
+See more: http://stackoverflow.com/questions/3240881/git-can-i-suppress-listing-of-modified-content-dirty-submodule-entries-in-sta
 7. Create `cool` application: `django-admin.py startapp cool`
 8. Symlink: `cd teracy/teracy` then `ln -s ../../cool cool` and it's done. Just develop your app as normal.
 
