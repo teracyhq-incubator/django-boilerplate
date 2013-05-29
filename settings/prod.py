@@ -3,6 +3,12 @@ from common import *
 
 ROOT_URLCONF = 'urls.prod'
 
+# Make this unique, and don't share it with anybody.
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+# Generate random value from here and get value pasted here: http://www.miniwebtool.com/django-secret-key-generator/
+# Changed in Django 1.5: Django will now refuse to start if SECRET_KEY is not set.
+SECRET_KEY = ''
+
 #heroku
 # Parse database configuration from $DATABASE_URL
 if 'DATABASE_URL' in os.environ:
