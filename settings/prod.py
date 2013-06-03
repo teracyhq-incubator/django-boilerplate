@@ -1,6 +1,10 @@
 # settings for production
 from common import *
 
+#Disable DEBUG mode
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
+
 ROOT_URLCONF = 'urls.prod'
 
 # Make this unique, and don't share it with anybody.
