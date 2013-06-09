@@ -39,3 +39,6 @@ nosetests.xml
 .idea
 *.db
 .DS_Store
+
+#compass
+.sass-cache

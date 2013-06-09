@@ -27,6 +27,18 @@ From that clone repository as mentioned above, for example, we need to create a 
 That's it. Happy coding :-)!
 
 
+Work with SASS
+--------------
+
+1. Requirements: install ``compass`` (require ``sass``) with: ``gem install sass`` and ``gem install compass``.
+It's recommended to install ``virtualenvwrapper.gem`` at https://pypi.python.org/pypi/virtualenvwrapper.gem
+
+2. Watch any working compass projects with: ``sh compass.sh``.
+
+3. The compass project should be created into ``static`` directory and maps compiled assets into ``../css``, ``../img``
+and ``../js`` respectively. Whenever a compass is created, add its project path to compass.sh for easier watching.
+
+
 How to deploy on heroku
 -----------------------
 + heroku config:add DJANGO_SETTINGS_MODULE=settings.prod
