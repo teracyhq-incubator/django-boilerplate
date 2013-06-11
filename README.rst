@@ -36,7 +36,11 @@ It's recommended to install ``virtualenvwrapper.gem`` at https://pypi.python.org
 2. Watch any working compass projects with: ``sh compass.sh``.
 
 3. The compass project should be created into ``static`` directory and maps compiled assets into ``../css``, ``../img``
-and ``../js`` respectively. Whenever a compass is created, add its project path to compass.sh for easier watching.
+and ``../js`` respectively.
+::
+    compass create compass --css-dir "../static/css" --javascripts-dir "../static/js" --images-dir "../static/img"
+
+3. Whenever a compass is created, add its project path to compass.sh for easier watching.
 
 
 How to deploy on heroku
