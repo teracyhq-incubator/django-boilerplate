@@ -2,45 +2,17 @@
 teracy - Django project layout
 ==============================
 
+Get started
+-----------
 
-How to start with this project layout
--------------------------------------
+1. `Setup working environment <https://github.com/teracy-official/dev/blob/master/docs/setup_working_env.rst>`_
 
-1. Create a virtual environment by installing virtualenvwrapper here: http://virtualenvwrapper.readthedocs.org/en/latest/
+2. `Start develop a Django application <https://github.com/teracy-official/dev/blob/master/docs/start_develop.rst>`_
 
-2. ``workon`` that created virtual environment.
+3. `Coding conventions <https://github.com/teracy-official/dev/blob/master/docs/coding_conventions.rst>`_
 
-3. Clone this repository to your workspace.
+4. `IDE <https://github.com/teracy-official/dev/blob/master/docs/ide.rst>`_
 
-4. Install dev dependency requirements with this command: `pip install -r requirements/dev.txt`.
-
-5. Syncdb with: ``python manage.py syncdb`` and start the server with ``python manage.py runserver``.
-
-It's time having fun for developing cool apps :-).
-
-
-How to start develop an application from this project layout
-------------------------------------------------------------
-
-From that clone repository as mentioned above, for example, we need to create a ``cool`` application under `apps` directory, just ``cd apps`` then ``django-amdin.py startapp cool``.
-
-That's it. Happy coding :-)!
-
-
-Work with SASS
---------------
-
-1. Requirements: install ``compass`` (require ``sass``) with: ``gem install sass`` and ``gem install compass``.
-It's recommended to install ``virtualenvwrapper.gem`` at https://pypi.python.org/pypi/virtualenvwrapper.gem
-
-2. Watch any working compass projects with: ``sh compass.sh``.
-
-3. The compass project should be created into ``static`` directory and maps compiled assets into ``../css``, ``../img``
-and ``../js`` respectively.
-::
-    compass create compass --css-dir "../static/css" --javascripts-dir "../static/js" --images-dir "../static/img"
-
-3. Whenever a compass is created, add its project path to compass.sh for easier watching.
 
 
 How to deploy on heroku

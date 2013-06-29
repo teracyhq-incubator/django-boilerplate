@@ -1,2 +1,2 @@
-# standard dependency requirements file when deploying on PaaS like heroku.
--r requirements/dev.txt
+# standard dependency requirements file when deploying
+-r requirements/prod.txt
