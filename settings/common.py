@@ -1,5 +1,8 @@
-# Django settings for teracy project.
+"""
+common Django settings
+"""
 import os
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
