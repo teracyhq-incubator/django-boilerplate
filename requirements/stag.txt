@@ -1,2 +1,4 @@
 # requirements/stag.txt: staging dependency requirements
 -r common.txt
+
+-r project/stag.txt

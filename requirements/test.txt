@@ -1,2 +1,4 @@
 # requirements/test.txt: testing dependency requirements
 -r common.txt
+
+-r project/test.txt
