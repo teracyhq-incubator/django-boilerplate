@@ -1,11 +1,10 @@
-# settings for production
+"""
+settings for production mode
+"""
+from django.conf.global_settings import DATABASES
 from common import *
 
-#Disable DEBUG mode
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
-
-ROOT_URLCONF = 'urls.prod'
+ROOT_URLCONF = 'urls.project.prod'
 
 # Make this unique, and don't share it with anybody.
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key

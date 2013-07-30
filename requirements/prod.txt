@@ -1,2 +1,4 @@
 # requirements/prod.txt: production dependency requirements
 -r common.txt
+dj-database-url==0.2.1
+psycopg2==2.5
