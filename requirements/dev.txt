@@ -1,4 +1,7 @@
 # requirements/dev.txt: development dependency requirements
 -r common.txt
+
 gunicorn==0.17.4
 django-debug-toolbar
+
+-r project/dev.txt
