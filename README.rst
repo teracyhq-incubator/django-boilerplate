@@ -8,11 +8,7 @@ structure.
 Getting started
 ---------------
 
-1. `Setup working environment and start developing a Django application <https://github.com/teracy-official/chef-dev/blob/master/README.rst>`_
-
-2. `Coding conventions <https://github.com/teracy-official/dev/blob/master/docs/coding_conventions.rst>`_
-
-3. `IDE <https://github.com/teracy-official/dev/blob/master/docs/ide.rst>`_
+1. `Setup working environment and start developing a Django application <https://github.com/teracy-official/teracy-dev/blob/master/README.rst>`_
 
 How to
 ------
@@ -22,7 +18,7 @@ How to
     $ mkdir cool_project
     $ cd cool_project
     $ git init
-    $ git remote add teracy git@github.com:teracy-official/teracy.git
+    $ git remote add teracy git@github.com:teracy-official/teracy-django-boilerplate.git
     $ git fetch teracy
     $ git merge teracy/master
 
