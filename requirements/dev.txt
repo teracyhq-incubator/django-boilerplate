@@ -1,7 +1,7 @@
 # requirements/dev.txt: development dependency requirements
 -r common.txt
 
-gunicorn==0.17.4
-django-debug-toolbar
+gunicorn==17.5
+django-debug-toolbar==0.9.4
 
 -r project/dev.txt
