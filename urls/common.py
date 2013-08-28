@@ -1,3 +1,7 @@
+"""
+common settings for urls
+"""
+
 from django.conf.urls import patterns
 
 

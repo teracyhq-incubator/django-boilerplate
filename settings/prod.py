@@ -5,7 +5,7 @@ import dj_database_url
 
 from django.conf.global_settings import DATABASES
 
-from common import *  # noqa
+from settings.common import *  # noqa
 
 ROOT_URLCONF = 'urls.project.prod'
 
