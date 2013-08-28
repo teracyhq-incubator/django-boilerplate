@@ -172,4 +172,5 @@ nosetests.xml
 
 *_report.txt
 !.pylintrc
+!.travis.yml
 
