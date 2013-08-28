@@ -1,7 +1,12 @@
 # requirements/dev.txt: development dependency requirements
 -r common.txt
 
-gunicorn==17.5
+coverage==3.6
 django-debug-toolbar==0.9.4
+django-nose==1.2
+flake8==2.0
+gunicorn==17.5
+pylint==1.0.0
+tox==1.6.0
 
 -r project/dev.txt

@@ -1,4 +1,4 @@
 """
 test mode specific project settings
 """
-from settings.test import *
+from settings.test import *  # noqa

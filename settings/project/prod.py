@@ -1,4 +1,4 @@
 """
 production mode specific project settings
 """
-from settings.prod import *
+from settings.prod import *  # noqa

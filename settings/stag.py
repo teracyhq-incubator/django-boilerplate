@@ -1,6 +1,6 @@
 """
 settings for staging mode
 """
-from common import *
+from common import *  # noqa
 
 ROOT_URLCONF = 'urls.project.stag'
