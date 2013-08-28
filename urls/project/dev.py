@@ -1,1 +1,1 @@
-from urls.dev import *
+from urls.dev import *  # noqa

@@ -1,1 +1,1 @@
-from urls.stag import *
+from urls.stag import *  # noqa

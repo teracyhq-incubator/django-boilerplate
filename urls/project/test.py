@@ -1,1 +1,1 @@
-from urls.test import *
+from urls.test import *  # noqa

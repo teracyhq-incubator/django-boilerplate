@@ -1,4 +1,4 @@
 """
 staging mode specific project settings
 """
-from settings.stag import *
+from settings.stag import *  # noqa

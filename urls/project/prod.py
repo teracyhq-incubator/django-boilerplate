@@ -1,1 +1,1 @@
-from urls.prod import *
+from urls.prod import *  # noqa
