@@ -16,6 +16,14 @@ Usage
 
 Please head to http://dev.teracy.org/docs/develop/django_training.html
 
+Style checks:
+
+- ``$ pep8 .``
+
+- ``$ pylint --rcfile .pylintrc *.py settings urls apps libs``
+
+- ``$ flake8 --max-complexity 12 .``
+
 
 Installation
 ------------
