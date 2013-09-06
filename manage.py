@@ -2,10 +2,9 @@
 """
 A thin wrapper around django-admin.py that takes care of two things for you before delegating to
 django-admin.py
-
-- It puts your project’s package on sys.path.
-- It sets the DJANGO_SETTINGS_MODULE environment variable so that it points to your project’s
-  settings.py file.
+It puts your project’s package on sys.path.
+It sets the DJANGO_SETTINGS_MODULE environment variable so that it points to your project’s
+settings.py file.
 """
 import os
 import sys

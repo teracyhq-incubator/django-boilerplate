@@ -2,7 +2,7 @@
 settings for development mode
 """
 #from django.conf.global_settings import STATICFILES_FINDERS
-from common import *  # noqa
+from settings.common import *  # noqa
 
 DATA_DIR = os.path.join(PROJECT_DIR, 'data')
 
@@ -37,11 +37,6 @@ MIDDLEWARE_CLASSES += (
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '6a$a#-i&rfv^*vtjm2e38r#v)w!0&=av^)g7ifwoi!uor2kr4c'
 
-#TODO enable this?
-#
-#STATICFILES_FINDERS += (
-#    'compressor.finders.CompressorFinder',
-#)
 
 INSTALLED_APPS += (
     'django.contrib.admin',
