@@ -1,1 +1,5 @@
-from urls.test import *
+"""
+project specic settings for urls in testing mode
+"""
+
+from urls.test import *  # noqa

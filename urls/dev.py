@@ -1,7 +1,11 @@
+"""
+settings for urls in developing mode
+"""
+
 from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from common import *
+from urls.common import *  # noqa
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
