@@ -1,6 +1,12 @@
 Release Steps
 =============
 
+README.rst
+----------
+
+- update branch ``develop`` to ``master``
+
+
 CHANGELOG.md
 ------------
 
