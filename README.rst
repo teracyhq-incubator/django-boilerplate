@@ -35,10 +35,10 @@ For easy upgrade later, use ``git``:
     $ git init
     $ git remote add teracy https://github.com/teracy-official/django-boilerplate
     $ git fetch teracy
-    $ git merge teracy/master
+    $ git merge teracy/develop
 
 
-Or download zip file from https://github.com/teracy-official/django-boilerplate/archive/master.zip
+Or download zip file from https://github.com/teracy-official/django-boilerplate/archive/develop.zip
 
 
 Contributing
