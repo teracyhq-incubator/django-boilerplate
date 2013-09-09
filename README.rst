@@ -1,7 +1,7 @@
 django-boilerplate
 ==================
 
-``django-boilerplate`` offers best practices to organize and start any Django project.
+``django-boilerplate`` promotes best practices to organize and start any Django project.
 
 Continuous Integration
 ----------------------
