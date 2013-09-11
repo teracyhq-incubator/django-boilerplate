@@ -1,7 +1,7 @@
 """
 settings for development mode
 """
-#from django.conf.global_settings import STATICFILES_FINDERS
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 from settings.common import *  # noqa
 
 DATA_DIR = os.path.join(PROJECT_DIR, 'data')
