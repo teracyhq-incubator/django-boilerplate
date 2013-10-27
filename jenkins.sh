@@ -9,8 +9,12 @@ flake8 --max-complexity 12 .
 
 pep8 . > pep8_report.txt
 
-pylint --rcfile .pylintrc -f parseable *.py settings urls apps libs > pylint_report.txt || exit 0
+coverage erase
+# unit test report
+coverage run --branch --source=apps,libs manage.py test --with-xunit
 
-# coverage erase
-# ./manage.py test
-# coverage xml
+# coverage report
+coverage xml
+
+# must be the last command to exit 0, otherwise, the next command will not be executed.
+pylint --rcfile .pylintrc -f parseable *.py teracy > pylint_report.txt || exit 0
