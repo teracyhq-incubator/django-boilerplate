@@ -16,6 +16,7 @@ ROOT_URLCONF = 'urls.project.prod'
 SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
 
 #heroku
+
 # Parse database configuration from $DATABASE_URL
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config()
@@ -27,11 +28,5 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = 'staticfiles'
