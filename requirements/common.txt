@@ -1,2 +1,5 @@
 # requirements/common.txt: common dependency requirements
-Django==1.5.4
+Django>=1.5.0,<1.6.0 #install the latest Django 1.5.x version
+
+dj-database-url==0.2.2
+gunicorn==17.5
