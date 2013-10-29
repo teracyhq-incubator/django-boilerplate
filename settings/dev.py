@@ -36,9 +36,6 @@ MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '6a$a#-i&rfv^*vtjm2e38r#v)w!0&=av^)g7ifwoi!uor2kr4c'
-
 
 INSTALLED_APPS += (
     'django.contrib.admin',

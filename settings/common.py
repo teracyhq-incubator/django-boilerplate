@@ -24,6 +24,10 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
+# Make this unique, and don't share it with anybody. This is the development
+# fallback, change this by using environment settings.
+SECRET_KEY = 'dev-secret-key'
+
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = ''
