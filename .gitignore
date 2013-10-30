@@ -176,4 +176,5 @@ nosetests.xml
 
 # heroku
 venv
-staticfiles
+staticfiles/*
+!staticfiles/.gitkeep

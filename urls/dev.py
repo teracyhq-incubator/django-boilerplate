@@ -2,7 +2,6 @@
 settings for urls in developing mode
 """
 
-from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from urls.common import *  # noqa
