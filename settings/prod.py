@@ -5,6 +5,7 @@ from os import environ
 
 import dj_database_url
 from django.conf.global_settings import DATABASES
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS  # noqa
 
 from settings.common import *  # noqa
 
@@ -12,6 +13,7 @@ ROOT_URLCONF = 'urls.project.prod'
 
 # Make this unique, and don't share it with anybody, set it via environment settings.
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+# TODO(hoatle): do error warning on prod environment if SECRET_KEY is not provided.
 
 SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
 

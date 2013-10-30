@@ -3,13 +3,13 @@ common Django settings
 """
 import os
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'GMT'
+TIME_ZONE = 'UTC'
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
