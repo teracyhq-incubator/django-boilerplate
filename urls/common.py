@@ -2,7 +2,7 @@
 common settings for urls
 """
 
-from django.conf.urls import patterns
+from django.conf.urls import patterns, include, url  # noqa
 
 
 urlpatterns = patterns(
