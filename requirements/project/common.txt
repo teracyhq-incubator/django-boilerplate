@@ -1,0 +1,1 @@
+# project specific requirements shared by dev, stag and prod

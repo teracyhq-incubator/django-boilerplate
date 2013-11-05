@@ -1,0 +1,5 @@
+This directory contain static files which are automatically collected by:
+
+$ python manage.py collectstatic
+
+Don't put anything into this directory or it could be wiped out later by "collectstatic".

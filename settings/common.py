@@ -9,7 +9,7 @@ PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'GMT'
+TIME_ZONE = 'UTC'
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
@@ -24,6 +24,10 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
+# Make this unique, and don't share it with anybody. This is the development
+# fallback, change this by using environment settings.
+SECRET_KEY = 'dev-secret-key'
+
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = ''
@@ -37,7 +41,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(os.getcwd(), 'staticfiles')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"

@@ -174,3 +174,9 @@ nosetests.xml
 !.pylintrc
 !.travis.yml
 
+# heroku
+venv
+staticfiles/*
+!staticfiles/.gitkeep
+!staticfiles/README
+
