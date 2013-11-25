@@ -4,7 +4,13 @@ Release Steps
 README.rst
 ----------
 
-- update branch ``develop`` to ``master``
+- update branch ``develop`` to released version, and ``master`` when it's merged into ``master`` branch.
+
+
+scripts/djbp.sh
+---------------
+
+- update branch ``develop`` to released version, and ``master`` when it's merged into ``master`` branch.
 
 
 CHANGELOG.md
