@@ -12,7 +12,7 @@
 ############################################################################
 # Example to install on <your_project/docs>
 # $ cd <your_project>
-# $ wget https://raw.github.com/teracy-official/django-boilerplate/develop/scripts/djbp.sh && chmod +x ./djbp.sh && ./djbp.sh -p .
+# $ wget https://raw.github.com/teracy-official/django-boilerplate/master/scripts/djbp.sh && chmod +x ./djbp.sh && ./djbp.sh -p .
 #
 
 function command_exists() {
@@ -53,7 +53,7 @@ function install() {
     git clone https://github.com/teracy-official/django-boilerplate.git
     cd django-boilerplate
     git fetch origin
-    git checkout origin/develop
+    git checkout origin/master
     # test
     #git clone https://github.com/hoatle/django-boilerplate.git
     #cd django-boilerplate
