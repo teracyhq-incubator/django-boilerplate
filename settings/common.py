@@ -2,8 +2,13 @@
 common Django settings
 """
 import os
+import sys
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+# insert apps and libs into the system path
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'apps'))
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'libs'))
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
