@@ -104,8 +104,8 @@ BSD License
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.. |travis build status| image:: https://travis-ci.org/teracy-official/django-boilerplate.png?branch=develop
-.. _travis build status: https://travis-ci.org/teracy-official/django-boilerplate
+.. |travis build status| image:: https://travis-ci.org/teracyhq/django-boilerplate.png?branch=develop
+.. _travis build status: https://travis-ci.org/teracyhq/django-boilerplate
 
 .. |jenkins build status| image:: https://ci.teracy.org/buildStatus/icon?job=django-boilerplate-develop
 .. _jenkins build status: https://ci.teracy.org/job/django-boilerplate-develop/
