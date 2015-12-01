@@ -7,7 +7,7 @@ import dj_database_url
 from django.conf.global_settings import DATABASES
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS  # noqa
 
-from settings.common import *  # noqa
+from .project.common import *  # noqa
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
