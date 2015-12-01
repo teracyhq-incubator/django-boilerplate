@@ -1,7 +1,24 @@
 Change Log
 ==========
 
-[0.2.0]() (2013-11-07)
+[0.3.0][] (2015-12-01)
+----------------------
+
+upgrade Django and packages, add apps and libs to the sytem path
+
+- Bug
+    + [DJBP-19] - Fix style error from travis-ci failed build
+
+
+- Improvement
+    + [DJBP-18] - add apps and libs to system path
+
+
+- Task
+    + [DJBP-20] - upgrade dependencies
+
+
+[0.2.0][] (2013-11-07)
 ----------------------
 
 proper prod settings, improve jenkins.sh, remove "test" profile settings.
@@ -18,7 +35,7 @@ proper prod settings, improve jenkins.sh, remove "test" profile settings.
     + [DJBP-12] - set email_backend to be console email backend for dev mode
 
 
-[0.1.0]() (2013-09-07)
+[0.1.0][] (2013-09-07)
 ----------------------
 
 Initial milestone release
@@ -29,4 +46,7 @@ Initial milestone release
 
 
 [0.1.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=10007
+
 [0.2.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=10200
+
+[0.3.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=10501
