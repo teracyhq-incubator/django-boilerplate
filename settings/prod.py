@@ -21,7 +21,7 @@ ROOT_URLCONF = 'urls.project.prod'
 
 SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
 
-#heroku
+# heroku
 # Parse database configuration from $DATABASE_URL
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config()

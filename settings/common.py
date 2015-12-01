@@ -2,8 +2,13 @@
 common Django settings
 """
 import os
+import sys
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+# insert apps and libs into the system path
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'apps'))
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'libs'))
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -86,7 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    #'django.contrib.admin',
+    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -96,7 +101,7 @@ INSTALLED_APPS = (
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
-#TODO(hoatle): better logging handler
+# TODO(hoatle): better logging handler
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

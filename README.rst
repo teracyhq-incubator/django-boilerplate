@@ -8,8 +8,6 @@ Continuous Integration
 
 |travis build status|_
 
-|jenkins build status|_
-
 
 Usage
 -----
@@ -33,12 +31,12 @@ For easy upgrade later, use ``git``:
     $ mkdir <your_project>
     $ cd <your_project>
     $ git init
-    $ git remote add teracy https://github.com/teracy-official/django-boilerplate
-    $ git fetch teracy
-    $ git merge teracy/master
+    $ git remote add djbp https://github.com/teracyhq/django-boilerplate
+    $ git fetch djbp
+    $ git merge djbp/master
 
 
-Or download zip file from https://github.com/teracy-official/django-boilerplate/archive/master.zip
+Or download zip file from https://github.com/teracyhq/django-boilerplate/archive/master.zip
 
 
 Contributing
@@ -46,7 +44,7 @@ Contributing
 
 - File issues at https://issues.teracy.org/browse/DJBP
 
-- Follow Teracy's workflow at http://dev.teracy.org/docs/develop/workflow.html
+- Follow Teracy's workflow at http://dev.teracy.org/docs/workflow.html
 
 
 Discussions
@@ -60,9 +58,9 @@ Join us:
 
 Get our news:
 
-- https://www.facebook.com/teracy.official
+- https://www.facebook.com/teracyhq
 
-- https://twitter.com/teracy_official
+- https://twitter.com/teracyhq
 
 
 Author and contributors
@@ -104,8 +102,8 @@ BSD License
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.. |travis build status| image:: https://travis-ci.org/teracy-official/django-boilerplate.png?branch=develop
-.. _travis build status: https://travis-ci.org/teracy-official/django-boilerplate
+.. |travis build status| image:: https://travis-ci.org/teracyhq/django-boilerplate.png?branch=master
+.. _travis build status: https://travis-ci.org/teracyhq/django-boilerplate
 
 .. |jenkins build status| image:: https://ci.teracy.org/buildStatus/icon?job=django-boilerplate-develop
 .. _jenkins build status: https://ci.teracy.org/job/django-boilerplate-develop/

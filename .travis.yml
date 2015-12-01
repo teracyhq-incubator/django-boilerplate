@@ -1,16 +1,13 @@
 language: python
 python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
+- '2.7'
+- '3.4'
+- '3.5'
 install: pip install -r requirements/dev.txt
 script:
-# TODO(hoatle): have to disable this as travis-ci yields error on Python 3.2 and 3.3
-# see more: https://travis-ci.org/hoatle/django-boilerplate/builds/13098578
-#  - coverage run --branch --source=apps,libs manage.py test -v 2
--  flake8 --max-complexity 12 . # move this to after_success when test is enabled
+- flake8 --max-complexity 12 .
 after_success:
-# enable coverage report when test is enabled
-#  - coverage report
-  - pylint --rcfile .pylintrc *.py settings urls apps libs || exit 0
+- pylint --rcfile .pylintrc *.py settings urls apps libs || exit 0
+notifications:
+  slack:
+    secure: PKiHP5sTDfNbzhUQKdKcfbZmRTEbaKURDkuIrDKa0cQMGNTLtY7xJBJ2hCN5Iv5DHCjjo4VYe/eiQp1gACeq25aCinF9oP8gJG5X8nHkVpYg6jA5lXHkO8/jpEjdxRLhtrZ+kqUMKx3eAdfFN3YJqOw314GG42NjToK6jdLUods=

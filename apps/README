@@ -1,3 +1,5 @@
-This is the directory for Django applications.
+This is the directory for project Django applications.
 
-To start a new application, cd to this directory and `python ../manage.py startapp app_name`.
+This directory is added to the Python system path.
+
+To start a new application: `$ mkdir apps/<app_name>  && python manage.py startapp <app_name> apps/<app_name>`.
