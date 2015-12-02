@@ -1,5 +1,5 @@
 """
-project specic settings for urls in developing mode
+project specific settings for urls in development mode
 """
 
 from urls.dev import *  # noqa
