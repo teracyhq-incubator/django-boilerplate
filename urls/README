@@ -1,0 +1,18 @@
+urls module is organized so that there is global urls for all projects and project
+urls for each specific project.
+
+- global urls are updated by django-boilerplate itself
+- project urls are updated by each specific project itself
+
+The hierarchy structure:
+
+- urls.common > project.common -> urls.dev -> project.dev
+- urls.common -> project.common -> urls.prod -> project.prod
+- urls.common -> project.common -> urls.stag -> project.stag
+
+project.common is used to override urls.common
+project.dev is used to override urls.dev
+project.prod is used to override urls.prod
+project.stag is used to override urls.stag
+
+dev, prod and stag are settings for development, production and staging environment respectively
