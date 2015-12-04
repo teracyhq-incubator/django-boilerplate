@@ -163,7 +163,7 @@ nosetests.xml
 
 # Mr Developer
 .mr.developer.cfg
-.project
+#.project
 .pydevproject
 
 ## django-boilerplate
@@ -180,3 +180,4 @@ staticfiles/*
 !staticfiles/.gitkeep
 !staticfiles/README
 
+.env

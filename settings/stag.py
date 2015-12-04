@@ -1,7 +1,8 @@
 """
 settings for staging mode
 """
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS  # noqa
 from .project.common import *  # noqa
 
-ROOT_URLCONF = 'urls.project.stag'
+DEBUG = False
+
+ROOT_URLCONF = os.environ.get('ROOT_URLCONF', 'urls.project.stag')
