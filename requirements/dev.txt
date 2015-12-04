@@ -7,6 +7,7 @@ django-nose>=1.4.2,<1.5.0
 flake8>=2.5.0,<2.6.0
 pylint>=1.5.0,<1.6.0
 tox>=2.2.1,<2.3.0
+ipython # should always use the latest versions
 
 -r project/common.txt
 -r project/dev.txt
