@@ -10,8 +10,6 @@ import os
 
 import dotenv
 
-import heroku_env
-
 
 def bootstrap():
     """application bootstrap"""
@@ -20,6 +18,8 @@ def bootstrap():
     # insert apps and libs into the system path
     sys.path.insert(0, os.path.join(project_dir, 'apps'))
     sys.path.insert(0, os.path.join(project_dir, 'libs'))
+
+    import heroku_env
 
     dotenv.read_dotenv()
 
