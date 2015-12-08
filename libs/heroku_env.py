@@ -73,11 +73,14 @@ __author__ = 'hoatle'
 __version__ = '0.1.0-dev0'
 
 
-def setting_value(name, value, override=True):
+def setting_value(name, value, override=True, ignore_none=False):
     """Set new value settings
     By default, override default value.
     To skip override, pass override=False
     """
+    if ignore_none and value is None:
+        return
+
     if override:
         setattr(settings, name, value)
     else:
@@ -102,6 +105,10 @@ def cast_bool(value):
 
 def set_env():
     """Set, Override settings values"""
+    # default site
+    setting_value('SITE_DOMAIN', env('SITE_DOMAIN', default=None), ignore_none=True)
+    setting_value('SITE_NAME', env('SITE_NAME', default=None), ignore_none=True)
+
     # emails
     setting_value('DEFAULT_FROM_EMAIL', env('DEFAULT_FROM_EMAIL',
                                             default=settings.DEFAULT_FROM_EMAIL))
