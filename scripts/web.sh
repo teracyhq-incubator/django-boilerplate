@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-exec gunicorn project.wsgi
+exec newrelic-admin run-program gunicorn project.wsgi --log-file -

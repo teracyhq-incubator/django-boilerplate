@@ -5,3 +5,4 @@ envparse>=0.1.6,<0.2.0
 dj-database-url>=0.3.0,<0.4.0
 gunicorn>=19.4.0,<19.5.0
 celery>=3.1.19,<3.2.0
+newrelic>=2.60.0.46,<3.0.0.0
