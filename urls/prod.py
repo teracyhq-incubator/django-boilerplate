@@ -2,4 +2,4 @@
 settings for urls in production mode
 """
 
-from .project.common import *  # noqa
+from project.urls.common import *  # noqa

@@ -11,8 +11,15 @@ import os
 import dotenv
 
 
+_bootstrapped = False
+
+
 def bootstrap():
     """application bootstrap"""
+    global _bootstrapped
+
+    if _bootstrapped:
+        return
 
     project_dir = os.path.dirname(__file__)
     # insert apps and libs into the system path
@@ -29,3 +36,4 @@ def bootstrap():
     # Env.read_envfile()
 
     heroku_env.set_env()
+    _bootstrapped = True

@@ -69,93 +69,49 @@ from envparse import env
 import dj_database_url
 from django.conf import settings
 
-__author__ = 'hoatle'
-__version__ = '0.1.0-dev0'
-
-
-def setting_value(name, value, override=True, ignore_none=False):
-    """Set new value settings
-    By default, override default value.
-    To skip override, pass override=False
-    """
-    if ignore_none and value is None:
-        return
-
-    if override:
-        setattr(settings, name, value)
-    else:
-        value = getattr(settings, name, value)
-        setattr(settings, name, value)
-
-
-def cast_eval(value):
-    """
-    cast value by eval
-    TODO(hoatle): any security concerns?
-    """
-    return eval(value)
-
-BOOLEAN_TRUE_STRINGS = ('true', 'on', 'ok', 'y', 'yes', '1')
-
-
-def cast_bool(value):
-    """cast string to boolean"""
-    return value.lower() in BOOLEAN_TRUE_STRINGS
+from env_vars import env_vars, setting_value, cast_bool, cast_eval
 
 
 def set_env():
     """Set, Override settings values"""
-    # default site
-    setting_value('SITE_DOMAIN', env('SITE_DOMAIN', default=None), ignore_none=True)
-    setting_value('SITE_NAME', env('SITE_NAME', default=None), ignore_none=True)
-
-    # emails
-    setting_value('DEFAULT_FROM_EMAIL', env('DEFAULT_FROM_EMAIL',
-                                            default=settings.DEFAULT_FROM_EMAIL))
-    setting_value('EMAIL_SUBJECT_PREFIX', env('EMAIL_SUBJECT_PREFIX',
-                                              default=settings.EMAIL_SUBJECT_PREFIX))
-    setting_value('EMAIL_BACKEND', env('EMAIL_BACKEND', default=settings.EMAIL_BACKEND))
-    setting_value('SERVER_EMAIL', env('SERVER_EMAIL', default=settings.SERVER_EMAIL))
-    setting_value('EMAIL_HOST', env('EMAIL_HOST', default=settings.EMAIL_HOST))
-    setting_value('EMAIL_PORT', env('EMAIL_PORT', cast=int, default=settings.EMAIL_PORT))
-    setting_value('EMAIL_HOST_USER', env('EMAIL_HOST_USER', default=settings.EMAIL_HOST_USER))
-    setting_value('EMAIL_HOST_PASSWORD', env('EMAIL_HOST_PASSWORD',
-                                             default=settings.EMAIL_HOST_PASSWORD))
-    setting_value('EMAIL_USE_TLS', env('EMAIL_USE_TLS', cast=cast_bool,
-                                       default=settings.EMAIL_USE_TLS))
-    setting_value('EMAIL_USE_SSL', env('EMAIL_USE_SSL', cast=cast_bool,
-                                       default=settings.EMAIL_USE_SSL))
-    setting_value('EMAIL_SSL_KEYFILE', env('EMAIL_SSL_KEYFILE',
-                                           default=settings.EMAIL_SSL_CERTFILE))
-    setting_value('EMAIL_SSL_CERTFILE', env('EMAIL_SSL_CERTFILE',
-                                            default=settings.EMAIL_SSL_KEYFILE))
-    setting_value('EMAIL_TIMEOUT', env('EMAIL_TIMEOUT', default=settings.EMAIL_TIMEOUT))
-
-    # admins, managers
-    setting_value('ADMINS', env('ADMINS', cast=cast_eval, default=settings.ADMINS))
-
-    setting_value('MANAGERS', env('MANAGERS', cast=cast_eval, default=settings.MANAGERS))
+    env_vars.add(
+        # project
+        PROJECT_NAME=dict(default='Project'),
+        # sites
+        SITE_DOMAIN=dict(default=None, ignore_none=True),
+        SITE_NAME=dict(default=None, ignore_none=True),
+        # emails
+        DEFAULT_FROM_EMAIL=dict(default=None, ignore_none=True),
+        EMAIL_SUBJECT_PREFIX=dict(default=None, ignore_none=True),
+        EMAIL_BACKEND=dict(default=None, ignore_none=True),
+        SERVER_EMAIL=dict(default=None, ignore_none=True),
+        EMAIL_HOST=dict(default=None, ignore_none=True),
+        EMAIL_PORT=dict(default=None, ignore_none=True),
+        EMAIL_HOST_USER=dict(default=None, ignore_none=True),
+        EMAIL_HOST_PASSWORD=dict(default=None, ignore_none=True),
+        EMAIL_USE_TLS=dict(cast=cast_bool, default=None, ignore_none=True),
+        EMAIL_USE_SSL=dict(cast=cast_bool, default=None, ignore_none=True),
+        EMAIL_SSL_KEYFILE=dict(default=None, ignore_none=True),
+        EMAIL_SSL_CERTFILE=dict(default=None, ignore_none=True),
+        EMAIL_TIMEOUT=dict(default=None, ignore_none=True),
+        # admins, managers
+        ADMINS=dict(cast=cast_eval, default=None, ignore_none=True),
+        MANAGERS=dict(cast=cast_eval, default=None, ignore_none=True),
+        # Sentry
+        SENTRY_DSN=dict(default=None),
+        # Exceptional
+        EXCEPTIONAL_API_KEY=dict(default=None),
+        # GoogleFed
+        GOOGLE_DOMAIN=dict(default=None),
+        # Celery w/ RabbitMQ or Celery w/ RedisCloud
+        BROKER_URL=[dict(name='CLOUDAMQP_URL', only_if='CLOUDAMQP_URL'),
+                    dict(name='RABBITMQ_URL', only_if='RABBITMQ_URL'),
+                    dict(name='REDISCLOUD_URL', only_if='REDISCLOUD_URL')],
+        BROKER_TRANSPORT=dict(name='BROKER_TRANSPORT', only_if='BROKER_TRANSPORT')
+    )
 
     # DATABASE_URL
     setting_value('DATABASES', {'default': dj_database_url.config()})
-
-    # Sentry
-    setting_value('SENTRY_DSN', env('SENTRY_DSN', default=None))
-
-    # Exceptional
-    setting_value('EXCEPTIONAL_API_KEY', env('EXCEPTIONAL_API_KEY', default=None))
-
-    # Flask-GoogleFed
-    setting_value('GOOGLE_DOMAIN', env('GOOGLE_DOMAIN', default=None))
-
-    # Celery w/ RabbitMQ
-    if 'RABBITMQ_URL' in environ:
-        setting_value('BROKER_URL', env('RABBITMQ_URL'))
-
-    # Celery w/ RedisCloud
-    if 'REDISCLOUD_URL' in environ:
-        setting_value('BROKER_URL', env('REDISCLOUD_URL'))
-        setting_value('BROKER_TRANSPORT', env('REDISCLOUD_URL'))
 
     # Mailgun
     if 'MAILGUN_SMTP_SERVER' in environ:
@@ -167,16 +123,16 @@ def set_env():
         setting_value('MAILGUN_SMTP_PORT', env('MAILGUN_SMTP_PORT', cast=int))
         setting_value('MAILGUN_SMTP_SERVER', env('MAILGUN_SMTP_SERVER'))
 
-        mail_gun_use_api = env('MAILGUN_USE_API', cast=cast_bool, default=True)
-        mail_gun_use_smtp = env('MAILGUN_USE_SMTP', cast=cast_bool, default=True)
+        use_mail_gun_api = env('MAILGUN_USE_API', cast=cast_bool, default=True)
+        use_mail_gun_smtp = env('MAILGUN_USE_SMTP', cast=cast_bool, default=True)
 
         # for use api
-        if mail_gun_use_api:
+        if use_mail_gun_api:
             # django-mailgun:
             setting_value('MAILGUN_ACCESS_KEY', settings.MAILGUN_API_KEY)
             setting_value('MAILGUN_SERVER_NAME', settings.MAILGUN_DOMAIN)
 
-        if mail_gun_use_smtp:
+        if use_mail_gun_smtp:
             # for django smtp server: use smtp
             setting_value('EMAIL_HOST', settings.MAILGUN_SMTP_SERVER)
             setting_value('EMAIL_PORT', settings.MAILGUN_SMTP_PORT)

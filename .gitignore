@@ -22,7 +22,7 @@
 *.jar
 *.rar
 *.zip
-*.gz
+#*.gz
 *.bzip
 *.bz2
 *.xz
@@ -80,7 +80,7 @@ local.properties
 
 .*
 !.gitignore
-*~
+#*~
 
 ## https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
 
@@ -132,16 +132,15 @@ Session.vim
 *.py[cod]
 
 # C extensions
-*.so
+#*.so
 
 # Packages
-*.egg
+#*.egg
 *.egg-info
 dist
 build
 eggs
 parts
-bin
 var
 sdist
 develop-eggs
@@ -176,8 +175,12 @@ nosetests.xml
 
 # heroku
 venv
-staticfiles/*
-!staticfiles/.gitkeep
-!staticfiles/README
+project/staticfiles/*
+!project/staticfiles/.gitkeep
+!project/staticfiles/README
+
+project/data/*
+!project/data/.gitkeep
 
 .env
+celerybeat-schedule.*
