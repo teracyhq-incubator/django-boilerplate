@@ -1,1 +1,1 @@
-web: gunicorn wsgi
+web: scripts/web.sh

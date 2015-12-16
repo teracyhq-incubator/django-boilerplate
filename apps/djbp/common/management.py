@@ -10,18 +10,18 @@ from django.db import DEFAULT_DB_ALIAS, router
 def update_default_site(app_config, verbosity=2, interactive=True, using=DEFAULT_DB_ALIAS,
                         **kwargs):
     try:
-        Site = apps.get_model('sites', 'Site')
+        site_model = apps.get_model('sites', 'Site')
     except LookupError:
         return
 
-    if not router.allow_migrate_model(using, Site):
+    if not router.allow_migrate_model(using, site_model):
         return
 
     if verbosity >= 2:
         print('Updating example.com Site object')
 
     if getattr(settings, 'SITE_ID', None):
-        site = Site.objects.get(pk=settings.SITE_ID)
+        site = site_model.objects.get(pk=settings.SITE_ID)
         site.domain = settings.SITE_DOMAIN
         site.name = settings.SITE_NAME
         site.save(using=using)
