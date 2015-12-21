@@ -8,13 +8,11 @@ Continuous Integration
 
 |travis build status|_
 
-|jenkins build status|_
-
 
 Usage
 -----
 
-Please head to http://dev.teracy.org/docs/develop/django_training.html
+Please head to http://dev.teracy.org/docs/django_training.html
 
 Style checks:
 
@@ -35,10 +33,10 @@ For easy upgrade later, use ``git``:
     $ git init
     $ git remote add djbp https://github.com/teracyhq/django-boilerplate
     $ git fetch djbp
-    $ git merge djbp/develop
+    $ git merge djbp/master
 
 
-Or download zip file from https://github.com/teracyhq/django-boilerplate/archive/develop.zip
+Or download zip file from https://github.com/teracyhq/django-boilerplate/archive/master.zip
 
 
 Contributing
@@ -104,8 +102,5 @@ BSD License
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-.. |travis build status| image:: https://travis-ci.org/teracyhq/django-boilerplate.png?branch=develop
+.. |travis build status| image:: https://travis-ci.org/teracyhq/django-boilerplate.png?branch=master
 .. _travis build status: https://travis-ci.org/teracyhq/django-boilerplate
-
-.. |jenkins build status| image:: https://ci.teracy.org/buildStatus/icon?job=django-boilerplate-develop
-.. _jenkins build status: https://ci.teracy.org/job/django-boilerplate-develop/

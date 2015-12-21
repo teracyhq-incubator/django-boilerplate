@@ -1,6 +1,26 @@
 Change Log
 ==========
 
+[0.4.0][] (2015-12-21)
+----------------------
+
+lots of improvements with broken changes.
+
+
+- Improvement
+    + [DJBP-22] - should organize settings module better #13
+    + [DJBP-23] - should organize urls module better #15
+    + [DJBP-24] - audit the settings and overall organization to keep up to date with Django 1.8.x #16
+    + [DJBP-25] - migrate Site data for dev, stag and prod modes #19
+    + [DJBP-27] - should support send mass html mails #21
+    + [DJBP-28] - should support optional celery app #24
+    + [DJBP-30] - should support newrelic monitoring #22
+
+
+- Task
+    + [DJBP-26] - Release django-boilerplate v0.4.0
+
+
 [0.3.0][] (2015-12-01)
 ----------------------
 
@@ -50,3 +70,5 @@ Initial milestone release
 [0.2.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=10200
 
 [0.3.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=10501
+
+[0.4.0]: https://issues.teracy.org/secure/ReleaseNote.jspa?projectId=10407&version=12500
