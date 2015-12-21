@@ -12,7 +12,7 @@ Continuous Integration
 Usage
 -----
 
-Please head to http://dev.teracy.org/docs/develop/django_training.html
+Please head to http://dev.teracy.org/docs/django_training.html
 
 Style checks:
 
@@ -104,6 +104,3 @@ BSD License
 
 .. |travis build status| image:: https://travis-ci.org/teracyhq/django-boilerplate.png?branch=master
 .. _travis build status: https://travis-ci.org/teracyhq/django-boilerplate
-
-.. |jenkins build status| image:: https://ci.teracy.org/buildStatus/icon?job=django-boilerplate-develop
-.. _jenkins build status: https://ci.teracy.org/job/django-boilerplate-develop/

@@ -1,1 +1,2 @@
-web: gunicorn wsgi
+web: scripts/web.sh
+celery: scripts/celery.sh
